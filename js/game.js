@@ -237,8 +237,8 @@ $('#math').show();
 	var num = (prompt("pick any number"));
 	if (isNaN(num)) {
 		alert(num + " is not a number please try again");
-		}else if (num === "") {
-		alert("you did not enter a number");
+		/*}else if (num === "") {
+		alert("you did not enter a number");*/
 
 }else{
 	var multiply = num * 2;
@@ -296,17 +296,13 @@ $('#sort').click(function() {
          }, function(){
          $(this).removeClass('styleize');
      });
-		 $("button").click(function(event){
-        $("span").text(event.timeStamp);
-    });
+
 $('#timestamp').hide();
 $('#time').click(function(event) {
-		$('#timestamp').show();
+	$('#timestamp').show();
 		$('#stamp').text(event.timestamp)
-		$('#stamp').css('color' , 'red')
+	$('#stamp').css('color' , 'red')
 
-}/*function () {
-	$('#timestamp').show()
-}*/)
+});
 
 });
