@@ -237,12 +237,12 @@ $('#math').show();
 	var num = (prompt("pick any number"));
 	if (isNaN(num)) {
 		alert(num + " is not a number please try again");
-		}else if (num === "") {
-		alert("you did not enter a number");
+		/*}else if (num === "") {
+		alert("you did not enter a number");*/
 
 }else{
 	var multiply = num * 2;
-	$('#timesTwo').text(' ' + multiply);
+	$('#timesTwo').text(num +' times two equals ' + multiply);
 }
 });
 $('#divide').click(function() {
@@ -296,17 +296,21 @@ $('#sort').click(function() {
          }, function(){
          $(this).removeClass('styleize');
      });
-		 $("button").click(function(event){
-        $("span").text(event.timeStamp);
-    });
+
 $('#timestamp').hide();
 $('#time').click(function(event) {
-		$('#timestamp').show();
-		$('#stamp').text(event.timestamp)
-		$('#stamp').css('color' , 'red')
+	$('#timestamp').show();
+		$('#stamp').text(event.timeStamp)
+	$('#stamp').css('color' , 'red')
 
-}/*function () {
-	$('#timestamp').show()
-}*/)
+});
+$('#ctime').hide()
+$('#current').click(function(){
+$('#ctime').show()
+	var dt = new Date();
 
+var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+console.log(time);
+	$('#printTime').text("It is " +time)
+})
 });
